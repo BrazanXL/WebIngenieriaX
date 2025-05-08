@@ -1,12 +1,1 @@
 @import "tailwindcss";
-
-.parallax {
-    background-image: url('/1.svg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Parallax suave */
-    transform: translateZ(0);
-    will-change: background-position;
-}
