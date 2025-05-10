@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Icon from "../layouts/icon.astro";
+import Footer from "../component/Footer.astro";
 import "../styles/global.css";
 ---
 
@@ -9,21 +10,26 @@ import "../styles/global.css";
 	<nav
 		class="flex justify-between items-center p-4 bg-black bg-opacity-70 sticky top-0 z-50"
 	>
-		<div class="text-xl font-bold">Ingeniería X</div>
+		<img src="/logo.svg" alt="Logo" class="w-32" />
 		<ul class="flex space-x-6">
 			<li><a href="#" class="hover:text-green-400">Inicio</a></li>
 			<!-- <li><a href="#" class="hover:text-green-400">Tienda</a></li> -->
 			<!-- <li><a href="#" class="hover:text-green-400">Creación de páginas web</a></li> -->
 			<!-- <li><a href="#" class="hover:text-green-400">Códigos y diagramas Arduino</a></li> -->
 			<!-- <li><a href="#" class="hover:text-green-400">Diseño web</a></li> -->
-			<li><a href="#" class="hover:text-green-400"><Icon name="lupa"/></a></li>
+			<li>
+				<a href="#" class="hover:text-green-400"
+					><Icon name="lupa" /></a>
+			</li>
 		</ul>
 	</nav>
 
 	<!-- Hero -->
-	<div class="h-screen bg-[url('/1.jpg')] bg-cover bg-center bg-fixed flex flex-col justify-center items-center text-center px-4 relative">
+	<div
+		class="h-screen bg-[url('/1.jpg')] bg-cover bg-center bg-fixed flex flex-col justify-center items-center text-center px-4 relative"
+	>
 		<div class="absolute inset-0 bg-black bg-opacity-50 z=0"></div>
-		<h1 class="relative z-10 text-4xl md:text-6xl font-bold">ENGINEERING X</h1>
+		<img src="/logo.svg" alt="Logo" class="w-132 z-10" />
 		<p class="relative z-10 mt-4 text-lg md:text-2xl text-green-300">
 			Technological Solutions
 		</p>
@@ -43,22 +49,30 @@ import "../styles/global.css";
 	<section class="py-20 bg-gray-800 px-6">
 		<h2 class="text-3xl font-bold text-center mb-10">Nuestros Servicios</h2>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-			<div
-				class="bg-gray-700 rounded-2xl p-8 hover:scale-105 transform transition"
+			<!-- Tienda -->
+			<a
+				href="/Tienda"
+				class="bg-gray-700 rounded-2xl p-8 hover:scale-105 transform transition block"
 			>
 				<h3 class="text-xl font-semibold mb-2">Tienda</h3>
 				<p class="text-gray-300">
 					Compra componentes y kits electrónicos.
 				</p>
-			</div>
-			<div
-				class="bg-gray-700 rounded-2xl p-8 hover:scale-105 transform transition"
+			</a>
+
+			<!-- Diseño Web -->
+			<a
+				href="/diseño-web"
+				class="bg-gray-700 rounded-2xl p-8 hover:scale-105 transform transition block"
 			>
 				<h3 class="text-xl font-semibold mb-2">Diseño Web</h3>
 				<p class="text-gray-300">Creamos tu página profesional.</p>
-			</div>
-			<div
-				class="bg-gray-700 rounded-2xl p-8 hover:scale-105 transform transition"
+			</a>
+
+			<!-- Arduino & Electrónica -->
+			<a
+				href="/arduino"
+				class="bg-gray-700 rounded-2xl p-8 hover:scale-105 transform transition block"
 			>
 				<h3 class="text-xl font-semibold mb-2">
 					Arduino & Electrónica
@@ -66,7 +80,7 @@ import "../styles/global.css";
 				<p class="text-gray-300">
 					Códigos, diagramas y asesoría técnica.
 				</p>
-			</div>
+			</a>
 		</div>
 	</section>
 
@@ -85,9 +99,5 @@ import "../styles/global.css";
 			Contáctanos
 		</button>
 	</section>
-
-	<!-- Footer -->
-	<footer class="py-6 bg-black text-center text-gray-500">
-		© 2025 Ingeniería X. Todos los derechos reservados.
-	</footer>
+	<Footer />
 </Layout>
